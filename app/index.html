@@ -4,17 +4,6 @@
   <meta charset="utf-8">
   <title>My AngularJS App</title>
   <link rel="stylesheet" href="css/app.css"/>
-</head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
-
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
-
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
@@ -25,5 +14,37 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#/view1">view1</a></li>
+    <li><a href="#/view2">view2</a></li>
+  </ul>
+
+  <div ng-view></div>
+
+  <div class="container-fluid" ng-controller='HeroesController'>
+    <div class="row-fluid">
+      <div class="span2">
+        <!--Sidebar content-->
+ 
+        Search: <input ng-model="query">
+        Sort by:
+        <select ng-model="orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="hp">Least HP</option>
+          <option value="-hp">Most HP</option>
+        </select>
+
+        <ul>
+          <li ng-repeat="hero in heroes | filter:query | orderBy:orderProp">
+            {{hero.name}}<br>
+            {{hero.hp}}<br>
+            {{hero.status}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

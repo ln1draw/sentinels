@@ -2,10 +2,29 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
+var myApp = angular.module('myApp', []);
 
-  }])
-  .controller('MyCtrl2', [function() {
+myApp.controller('HeroesController', function($scope){
+  $scope.heroes = [
+    {
+      'name': 'Legacy',
+      'hp': 32,
+      'status': 'none'
+    },
+    {
+      'name': 'Unity',
+      'hp': 26,
+      'status': 'none'
+    }
+  ];
 
-  }]);
+  $scope.orderProp = '-hp';
+});
+
+// angular.module('myApp.controllers', []).
+//   controller('MyCtrl1', [function() {
+
+//   }])
+//   .controller('MyCtrl2', [function() {
+
+//   }]);
