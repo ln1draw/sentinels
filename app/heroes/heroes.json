@@ -1,12 +1,14 @@
 [
   {
-    "name": "Raptor Bot",
-    "effect": "KILL ALL OF THE THINGS",
-    "flavor text": "Mr. Chomps, where are all your friends?"
+    "id": 1,
+    "name": "Legacy",
+    "hp": 32,
+    "status": "none"
   },
   {
-    "name": "Bee Bot",
-    "effect": "Go down in a blaze of glory",
-    "flavor text": "Technically, it's more of a hornet. But this is much cuter."
-  },
+    "id": 2,
+    "name": "Unity",
+    "hp": 26,
+    "status": "none"
+  }
 ]
