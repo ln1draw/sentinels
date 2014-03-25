@@ -2,20 +2,34 @@
 
 /* Controllers */
 
-var myApp = angular.module('myApp', []);
+var myAppControllers = angular.module('myAppControllers', []);
 
-myApp.controller('HeroesController', ['$scope', '$http', 
-  function($scope, $http){
-    $http.get('heroes/heroes.json').success(function(data){
+myAppControllers.controller('HeroesController', ['$scope', '$http',
+  function($scope, $http) {
+    $http.get('heroes/heroes.json').success(function(data) {
       $scope.heroes = data;
     });
+
     $scope.orderProp = '-hp';
-}]);
+  }]);
 
-// angular.module('myApp.controllers', []).
-//   controller('MyCtrl1', [function() {
+myAppControllers.controller('HeroController', ['$scope', '$routeParams', '$http',
+  function($scope, $routeParams, $http) {
+    $http.get('heroes/' + $routeParams.heroName + '.json').success(function(data){
+      $scope.hero = data;
+    });
+  }]);
 
-//   }])
-//   .controller('MyCtrl2', [function() {
+myAppControllers.controller("CardsController", ['$scope', '$http',
+  function($scope, $http){
+    $http.get('cards/cards.json').success(function(data){
+      $scope.cards = data;
+    });
+  }]);
 
-//   }]);
+myAppControllers.controller('CardController', ['$scope', '$routeParams', '$http',
+  function($scope, $routeParams, $http){
+    $http.get('cards/' + $routeParams.cardName + '.json').success(function(data){
+      $scope.card = data;
+    });
+  }]);

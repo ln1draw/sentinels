@@ -1,0 +1,15 @@
+<div class='container-fluid'>
+  <div class='row-fluid'>
+    <div class='span2'>
+      Search: <input ng-model="query">
+    </div>
+
+    <Div class='span10'
+      <ul>
+        <li ng-repeat="card in hero.cards | filter:query">
+          <a href="#/cards/{{card.name}}">{{card.name}}</a><br>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

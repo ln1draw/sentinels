@@ -1,0 +1,8 @@
+{
+  "name": "Lead from the front",
+  "hp": 0,
+  "effect": "Do a thing",
+  "flavor text": "Legacy is super patriotic",
+  "deck": "Legacy",
+  "type": ["one-shot"]
+}

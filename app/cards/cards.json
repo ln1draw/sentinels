@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Lead from the front",
+    "hp": 0,
+    "effect": "Do a thing",
+    "flavor text": "Legacy is super patriotic",
+    "deck": "Legacy",
+    "type": ["one-shot"]
+  },
+  
+  {
+    "name": "Inspiring Presence",
+    "hp": 0,
+    "effect": "Do another thing",
+    "flavor text": "I don't know why I only remember the titles",
+    "deck": "Legacy",
+    "type": ["ongoing"]
+  },
+
+  {
+    "name": "Raptor Bot",
+    "hp": 3,
+    "effect": "KILL ALL OF THE THINGS",
+    "flavor text": "Mr. Chomps, where are all your friends?",
+    "deck": "Unity",
+    "type": ["hero target", "golem"]
+  },
+
+  {
+    "name": "Bee Bot",
+    "hp": 1,
+    "effect": "Go down in a blaze of glory",
+    "flavor text": "Technically, it's more of a hornet. But this is much cuter.",
+    "deck": "Unity",
+    "type": ["hero target", "golem"]
+  }
+]

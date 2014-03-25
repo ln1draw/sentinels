@@ -1,0 +1,8 @@
+{
+  "name": "Raptor Bot",
+  "hp": 3,
+  "effect": "KILL ALL OF THE THINGS",
+  "flavor text": "Mr. Chomps, where are all your friends?",
+  "deck": "Unity",
+  "type": ["hero target", "golem"]
+}

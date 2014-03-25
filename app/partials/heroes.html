@@ -1,0 +1,23 @@
+<div class='container-fluid'>
+  <div class='row-fluid'>
+    <div class='span2'>
+      Search: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="hp">Least HP</option>
+        <option value="-hp">Most HP</option>
+      </select>
+    </div>
+
+    <Div class='span10'
+      <ul>
+        <li ng-repeat="hero in heroes | filter:query | orderBy:orderProp">
+          <a href="#/heroes/{{hero.name}}">{{hero.name}}</a><br>
+          {{hero.hp}}<br>
+          {{hero.status}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
