@@ -1,4 +1,5 @@
 <div class='container-fluid'>
+  <h1>{{hero.name}}</h1>
   <div class='row-fluid'>
     <div class='span2'>
       Search: <input ng-model="query">
@@ -7,7 +8,7 @@
     <Div class='span10'
       <ul>
         <li ng-repeat="card in hero.cards | filter:query">
-          <a href="#/cards/{{card['id']}}">{{card['name']}}</a><br>
+          <a href="#/cards/{{card.id}}">{{card.name}}</a><br>
         </li>
       </ul>
     </div>
