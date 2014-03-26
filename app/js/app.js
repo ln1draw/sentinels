@@ -13,7 +13,7 @@ myApp.config(['$routeProvider',
         controller: 'HeroesController'
       }).
 
-      when('/heroes/:heroName', {
+      when('/heroes/:heroId', {
         templateUrl: 'partials/hero.html',
         controller: 'HeroController'
       }).
@@ -23,7 +23,7 @@ myApp.config(['$routeProvider',
         controller: 'CardsController'
       }).
       
-      when('/cards/:cardName', {
+      when('/cards/:cardId', {
         templateUrl: 'partials/card.html',
         controller: 'CardController'
       }).

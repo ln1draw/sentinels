@@ -7,7 +7,7 @@
     <Div class='span10'
       <ul>
         <li ng-repeat="card in hero.cards | filter:query">
-          <a href="#/cards/{{card.name}}">{{card.name}}</a><br>
+          <a href="#/cards/{{card['id']}}">{{card['name']}}</a><br>
         </li>
       </ul>
     </div>

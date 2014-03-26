@@ -13,7 +13,7 @@
     <Div class='span10'
       <ul>
         <li ng-repeat="hero in heroes | filter:query | orderBy:orderProp">
-          <a href="#/heroes/{{hero.name}}">{{hero.name}}</a><br>
+          <a href="#/heroes/{{hero.id}}">{{hero.name}}</a><br>
           {{hero.hp}}<br>
           {{hero.status}}
           <button ng-click="makeActive(hero)">Make Active</button>

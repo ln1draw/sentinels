@@ -22,7 +22,7 @@
       <ul>
         <!-- should be replaced with code on the API side, I think -->
         <li ng-repeat="hero in heroes | filter:true">
-          <a href="#/heroes/{{hero.name}}">{{hero.name}}</a><br>
+          <a href="#/heroes/{{hero.id}}">{{hero.name}}</a><br>
           {{hero.hp}}<br>
           {{hero.special}}
         </li>
