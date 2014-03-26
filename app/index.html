@@ -15,5 +15,19 @@
 <body>
   <a href='/app/index.html#/heroes' class='header'><h1>Sentinels of the Please-Don't-Sue-Me</h1></a>
   <div ng-view></div>
+
+  <div class='footer' ng-controller='HeroesController'>
+    <h2>Active Heroes</h2>
+    <div class='span10'
+      <ul>
+        <!-- should be replaced with code on the API side, I think -->
+        <li ng-repeat="hero in heroes | filter:true">
+          <a href="#/heroes/{{hero.name}}">{{hero.name}}</a><br>
+          {{hero.hp}}<br>
+          {{hero.special}}
+        </li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>

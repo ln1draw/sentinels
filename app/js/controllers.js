@@ -11,6 +11,11 @@ myAppControllers.controller('HeroesController', ['$scope', '$http',
     });
 
     $scope.orderProp = '-hp';
+
+    $scope.makeActive = function(hero){
+      hero.active = true;
+      hero.$save();
+    };
   }]);
 
 myAppControllers.controller('HeroController', ['$scope', '$routeParams', '$http',

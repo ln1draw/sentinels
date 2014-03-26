@@ -5,7 +5,8 @@
     "effect": "Do a thing",
     "flavor text": "Legacy is super patriotic",
     "deck": "Legacy",
-    "type": ["one-shot"]
+    "type": ["one-shot"],
+    "status": "inactive"
   },
   
   {
@@ -14,7 +15,8 @@
     "effect": "Do another thing",
     "flavor text": "I don't know why I only remember the titles",
     "deck": "Legacy",
-    "type": ["ongoing"]
+    "type": ["ongoing"],
+    "status": "inactive"
   },
 
   {
@@ -23,7 +25,8 @@
     "effect": "KILL ALL OF THE THINGS",
     "flavor text": "Mr. Chomps, where are all your friends?",
     "deck": "Unity",
-    "type": ["hero target", "golem"]
+    "type": ["hero target", "golem"],
+    "status": "inactive"
   },
 
   {
@@ -32,6 +35,7 @@
     "effect": "Go down in a blaze of glory",
     "flavor text": "Technically, it's more of a hornet. But this is much cuter.",
     "deck": "Unity",
-    "type": ["hero target", "golem"]
+    "type": ["hero target", "golem"],
+    "status": "inactive"
   }
 ]

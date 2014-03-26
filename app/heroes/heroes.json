@@ -3,12 +3,14 @@
     "id": 1,
     "name": "Legacy",
     "hp": 32,
-    "status": "none"
+    "special": "none",
+    "active": true
   },
   {
     "id": 2,
     "name": "Unity",
     "hp": 26,
-    "status": "none"
+    "special": "none",
+    "active": false
   }
 ]
