@@ -31,4 +31,5 @@ myApp.config(['$routeProvider',
       otherwise({
         redirectTo: '/heroes'
       });
-}]);
+  },
+]);

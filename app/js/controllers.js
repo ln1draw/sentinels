@@ -12,9 +12,10 @@ myAppControllers.controller('HeroesController', ['$scope', '$http',
 
     $scope.orderProp = '-hp';
 
-    $scope.makeActive = function(hero){
-      hero.active = true;
-      hero.$save();
+    $scope.makeActive = function(heroId){
+      $http.patch('http://localhost:3000/heroes/' + heroId + '.json').success(function(data){
+        $scope.hero = data;
+      });
     };
   }]);
 
@@ -34,7 +35,7 @@ myAppControllers.controller("CardsController", ['$scope', '$http',
 
 myAppControllers.controller('CardController', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http){
-    $http.get('http://localhost:3000/cards/' + $routeParams.cardName + '.json').success(function(data){
+    $http.get('http://localhost:3000/cards/' + $routeParams.cardId + '.json').success(function(data){
       $scope.card = data;
     });
   }]);
