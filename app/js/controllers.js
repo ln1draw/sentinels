@@ -6,13 +6,16 @@ var myAppControllers = angular.module('myAppControllers', []);
 
 myAppControllers.controller('HeroesController', ['$scope', '$http',
   function($scope, $http) {
+    $http.get('http://localhost:3000/actives').success(function(data){
+      $scope.actives = data;
+    });
     $http.get('http://localhost:3000/heroes').success(function(data) {
       $scope.heroes = data;
     });
 
     $scope.orderProp = '-hp';
 
-    $scope.activate = function(heroId){
+    $scope.activate_hero = function(heroId){
       // This should be a patch request
       // Does AngularJS support patch?
       $http.get('http://localhost:3000/heroes/' + heroId + '/activate.json').success(function(data){
@@ -20,7 +23,7 @@ myAppControllers.controller('HeroesController', ['$scope', '$http',
       });
     };
 
-    $scope.deactivate = function(heroId){
+    $scope.deactivate_hero = function(heroId){
       // This should be a patch request
       // Does AngularJS support patch?
       $http.get('http://localhost:3000/heroes/' + heroId + '/deactivate.json').success(function(data){
