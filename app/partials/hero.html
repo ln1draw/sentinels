@@ -1,5 +1,6 @@
 <div class='container-fluid'>
   <h1>{{hero.name }}</h1>
+  <button ng-click="activate_hero(hero.id)">Make Active</button>
   <div class='row-fluid'>
     <div class='span2'>
       Search: <input ng-model="query">
@@ -9,6 +10,7 @@
       <ul>
         <li ng-repeat="card in hero.cards | filter:query">
           <a href="#/cards/{{card.id}}">{{card.name}}</a><br>
+          <button ng-click="activate_card(card.id)">Make Active</button><br>
         </li>
       </ul>
     </div>

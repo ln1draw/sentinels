@@ -18,16 +18,17 @@
 
   <div class='footer' ng-controller='HeroesController'>
     <h2>Active Heroes</h2>
-    <div class='span10'
+    <div class='span10'>
       <ul>
         <!-- should be replaced with code on the API side, I think -->
         <li ng-repeat="hero in actives.heroes | filter:true">
           <a href="#/heroes/{{hero.id}}">{{hero.name}}</a><br>
           {{hero.hp}}<br>
-          {{hero.special}}
+          {{hero.effects}}
           <button ng-click="deactivate_hero(hero.id)">Deactivate</button>
         </li>
       </ul>
+
       <ul>
         <li ng-repeat="card in actives.cards | filter:true">
           <a href="#/cards/{{card.id}}">{{card.name}}</a><br>
