@@ -17461,7 +17461,7 @@ function $HttpProvider() {
      */
     function $http(requestConfig) {
       var config = {
-        method: 'get',
+        method: 'get', 
         transformRequest: defaults.transformRequest,
         transformResponse: defaults.transformResponse
       };

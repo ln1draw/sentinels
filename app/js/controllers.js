@@ -12,8 +12,18 @@ myAppControllers.controller('HeroesController', ['$scope', '$http',
 
     $scope.orderProp = '-hp';
 
-    $scope.makeActive = function(heroId){
-      $http.patch('http://localhost:3000/heroes/' + heroId + '.json').success(function(data){
+    $scope.activate = function(heroId){
+      // This should be a patch request
+      // Does AngularJS support patch?
+      $http.get('http://localhost:3000/heroes/' + heroId + '/activate.json').success(function(data){
+        $scope.hero = data;
+      });
+    };
+
+    $scope.deactivate = function(heroId){
+      // This should be a patch request
+      // Does AngularJS support patch?
+      $http.get('http://localhost:3000/heroes/' + heroId + '/deactivate.json').success(function(data){
         $scope.hero = data;
       });
     };

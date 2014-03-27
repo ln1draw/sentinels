@@ -1,8 +1,0 @@
-{
-  "name": "Bee Bot",
-  "hp": 1,
-  "effect": "Go down in a blaze of glory",
-  "flavor text": "Technically, it's more of a hornet. But this is much cuter.",
-  "deck": "Unity",
-  "type": ["hero target", "golem"]
-}
